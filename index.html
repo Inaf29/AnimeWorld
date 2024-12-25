@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Responsive Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>/* General Styles */
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background: linear-gradient(to bottom, #FAD361, #61FAD3, #D361FA);
+            background-size: cover;
+            animation: gradientAnimation 10s infinite alternate;
+        }
+        
+        h1, h2, h3, h4 {
+            margin: 0;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #FAD361;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+        
+        .header-nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .header-nav a {
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .header-nav a:hover {
+            color: #D361FA;
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .hero-text {
+            flex: 1;
+            max-width: 500px;
+        }
+        
+        .hero-text h2 {
+            font-size: 2.5rem;
+            color: #D361FA;
+        }
+        
+        .hero-text p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+        
+        .btn-primary {
+            padding: 10px 20px;
+            background: #61FAD3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #D361FA;
+        }
+        
+        .hero-image img {
+            border-radius: 20px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 40px;
+            text-align: center;
+            background: #FFF;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-card {
+            background: #FAD361;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #D361FA;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: #FAD361;
+                padding: 10px;
+                border-radius: 5px;
+            }
+        
+            .header-nav.active {
+                display: flex;
+            }
+        
+            .menu-toggle {
+                display: block;
+            }
+        }
+        
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" style="border-radius: 40%;">
+            <h1>Anime World</h1>
+        </div>
+        <nav class="header-nav">
+            <a href="#home" class="btn btn-primary">Home</a>
+            <a href="#features"class="btn btn-primary">Features</a>
+            <a href="#about" class="btn btn-primary">About</a>
+            <a href="https://www.instagram.com/inaf_29" class="btn btn-primary">Contact</a>
+        </nav>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-text">
+                <h2>Welcome to the Anime World</h2>
+                <p>Explore vibrant visuals and stunning animations inspired by your favorite anime movies.</p>
+                <button class="btn-primary">Get Started</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://w0.peakpx.com/wallpaper/484/680/HD-wallpaper-underwater-anime-girl-bubble-anime-girl-anime-artist-artwork-digital-art.jpg" alt="Anime Illustration">
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <h3>Key Features</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="https://w0.peakpx.com/wallpaper/71/899/HD-wallpaper-anime-lake-bubbles-reflection-scenic-anime.jpg" alt="Feature 1" style="border-radius: 2%;">
+                    <h4>Interactive UI</h4>
+                    <p>Engage with beautifully designed user interfaces.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://w0.peakpx.com/wallpaper/963/164/HD-wallpaper-anime-bubble-uta-bubble-hibiki-bubble.jpg" alt="Feature 2">
+                    <h4>Dynamic Visuals</h4>
+                    <p>Experience dynamic and responsive visual effects.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://w0.peakpx.com/wallpaper/84/670/HD-wallpaper-anime-bubble-hibiki-bubble-uta-bubble.jpg" alt="Feature 3">
+                    <h4>Anime Style</h4>
+                    <p>Aesthetic elements inspired by iconic anime themes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h3 style="justify-self: center;">About Us</h3>
+            <p style="justify-self: center;">
+                At Anime World, we are passionate about bringing the artistry and storytelling of anime into modern web design. 
+                Our mission is to create immersive and visually stunning experiences for all anime fans.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Anime World /iNaf | All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+const headerNav = document.querySelector(".header-nav");
+
+menuToggle.addEventListener("click", () => {
+    headerNav.classList.toggle("active");
+});
+
+    </script>
+</body>
+</html>
